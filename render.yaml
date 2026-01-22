@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ig-bot-dashboard
+    env: python
+    plan: starter
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+    startCommand: python app.py
